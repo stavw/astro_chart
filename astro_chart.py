@@ -62,6 +62,7 @@ def get_house_for_planet(planet_degree, house_cusps):
     #print("DEBUG: Planet house determination failed, returning UNKNOWN")
     return "UNKNOWN"  # Should never reach this line
 
+
 def get_house_cusps(jd_ut, lat, lon, house_system=b"P"):
     """Calculates house cusps based on Placidus system.
         House Systems:
@@ -92,6 +93,7 @@ def get_planet_positions(jd_ut, lat, lon):
         positions[planet] = {"sign": sign, "degree": pos[0], "house": house, "formatted": formatted_pos + f", House: {house}"}
     return positions
 
+
 def get_aspects(planet_positions, house_cusps):
     """Determines aspects between planets."""
     aspect_list = []
@@ -112,7 +114,7 @@ def get_aspects(planet_positions, house_cusps):
 
                     aspect_list.append(
                         f"{planet1} in House {house1} and {planet_positions[planet1]['sign']} "
-                        f"{aspect} {planet2} in House {house2} and {planet_positions[planet2]['sign']} "
+                        f"{aspect} {planet2} in House {house2} and {planet_positions[planet2]['sign']}"
                         #f"({angle:.2f}°)"
                     )
     return aspect_list

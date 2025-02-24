@@ -87,12 +87,12 @@ def test_get_aspects():
     }
     #pdb.set_trace()
     aspects = get_aspects(positions, house_cusps)
-    assert "Sun in House 12 and Aries Opposition Moon in House 6 and Libra (180.00°)" in aspects
-    assert "Sun in House 12 and Aries Trine Mars in House 4 and Twins (120.00°)" in aspects
-    assert "Sun in House 12 and Aries Sextile Venus in House 2 and Taurus (60.00°)" in aspects
-    assert "Moon in House 6 and Libra Sextile Mars in House 4 and Twins (60.00°)" in aspects
-    assert "Moon in House 6 and Libra Trine Venus in House 2 and Taurus (120.00°)" in aspects
-    assert "Mars in House 4 and Twins Sextile Venus in House 2 and Taurus (60.00°)" in aspects
+    assert "Sun in House 12 and Aries Opposition Moon in House 6 and Libra" in aspects
+    assert "Sun in House 12 and Aries Trine Mars in House 4 and Twins" in aspects
+    assert "Sun in House 12 and Aries Sextile Venus in House 2 and Taurus" in aspects
+    assert "Moon in House 6 and Libra Sextile Mars in House 4 and Twins" in aspects
+    assert "Moon in House 6 and Libra Trine Venus in House 2 and Taurus" in aspects
+    assert "Mars in House 4 and Twins Sextile Venus in House 2 and Taurus" in aspects
 
 def test_get_julian_day():
     birth_datetime = datetime(1986, 8, 13, 19, 40)
